@@ -1,7 +1,7 @@
 {
   "name": "instalacao",
   "version": "1.0.0",
-  "description": "",
+  "description": "Teste app",
   "main": "index.js",
   "dependencies": {
     "boolean": "^3.2.0",
@@ -14,6 +14,7 @@
     "defer-to-connect": "^2.0.1",
     "define-properties": "^1.2.0",
     "detect-node": "^2.1.0",
+    "electron-squirrel-startup": "^1.0.0",
     "end-of-stream": "^1.4.4",
     "env-paths": "^2.2.1",
     "es6-error": "^4.1.1",
@@ -54,6 +55,7 @@
     "resolve-alpn": "^1.2.1",
     "responselike": "^2.0.1",
     "roarr": "^2.15.4",
+    "rpmbuild": "^0.0.23",
     "semver": "^6.3.0",
     "semver-compare": "^1.0.0",
     "serialize-error": "^7.0.1",
@@ -66,11 +68,19 @@
     "yauzl": "^2.10.0"
   },
   "devDependencies": {
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
     "electron": "^25.2.0"
   },
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "author": "",
   "license": "ISC"
